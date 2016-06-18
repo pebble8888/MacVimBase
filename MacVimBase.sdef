@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<!--
+  Copyright © 2016 pebble8888. All rights reserved.
+-->
+
+<!-- declare the namespace for using XInclude so we can include the standard suite -->
+<dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
+	<!-- use XInclude to include the standard suite -->
+	<xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
+	<!-- specific suite(s) for the application follow... -->
+	<suite name="MacVim Base" code="MVbs" description="">
+		<command name="do direct parameter command" code="MVbsDpCm" description="run a command with a direct parameter">
+			<cocoa class="DirectParameterCommand"/>
+			<direct-parameter description="a text parameter passed to the command">
+				<type type="text"/>
+			</direct-parameter>
+			<result type="text" description="no use"/>
+		</command>
+	</suite>
+</dictionary>
